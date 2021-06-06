@@ -903,6 +903,11 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     "to-fast-properties" "^2.0.0"
 
+"@fortawesome/fontawesome-free@^5.11.2":
+  "integrity" "sha512-rFnSUN/QOtnOAgqFRooTA3H57JLDm0QEG/jPdk+tLQNL/eWd+Aok8g3qCI+Q1xuDPWpGW/i9JySpJVsq8Q0s9w=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.3.tgz"
+  "version" "5.15.3"
+
 "@hapi/address@2.x.x":
   "integrity" "sha1-XWftQ/P9QaadS5/3tW58DR0KgeU="
   "resolved" "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.1.4.tgz?cache=0&sync_timestamp=1603525310359&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40hapi%2Faddress%2Fdownload%2F%40hapi%2Faddress-2.1.4.tgz"
@@ -979,6 +984,13 @@
   dependencies:
     "@types/connect" "*"
     "@types/node" "*"
+
+"@types/chart.js@^2.7.55":
+  "integrity" "sha512-d45JiRQwEOlZiKwukjqmqpbqbYzUX2yrXdH9qVn6kXpPDsTYCo6YbfFOlnUaJ8S/DhJwbBJiLsMjKpW5oP8B2A=="
+  "resolved" "https://registry.npmjs.org/@types/chart.js/-/chart.js-2.9.32.tgz"
+  "version" "2.9.32"
+  dependencies:
+    "moment" "^2.10.2"
 
 "@types/connect-history-api-fallback@*":
   "integrity" "sha1-jA8Obl2CUraZ9aZi9Rvfgv2di7g="
@@ -1553,6 +1565,14 @@
     "mime-types" "~2.1.24"
     "negotiator" "0.6.2"
 
+"accounting-js@^1.1.1":
+  "integrity" "sha1-f+Sz9wwB6+C4XALF8QfxOTuIDJ4="
+  "resolved" "https://registry.npmjs.org/accounting-js/-/accounting-js-1.1.1.tgz"
+  "version" "1.1.1"
+  dependencies:
+    "is-string" "^1.0.4"
+    "object-assign" "^4.0.1"
+
 "acorn-walk@^7.1.1":
   "integrity" "sha1-DeiJpgEgOQmw++B7iTjcIdLpZ7w="
   "resolved" "https://registry.nlark.com/acorn-walk/download/acorn-walk-7.2.0.tgz"
@@ -1814,6 +1834,13 @@
   "resolved" "https://registry.npm.taobao.org/aws4/download/aws4-1.11.0.tgz?cache=0&sync_timestamp=1604101385256&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faws4%2Fdownload%2Faws4-1.11.0.tgz"
   "version" "1.11.0"
 
+"axios@^0.19.0", "axios@^0.19.2":
+  "integrity" "sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA=="
+  "resolved" "https://registry.npmjs.org/axios/-/axios-0.19.2.tgz"
+  "version" "0.19.2"
+  dependencies:
+    "follow-redirects" "1.5.10"
+
 "babel-loader@^8.1.0":
   "integrity" "sha1-k2POhMEMmkDmx1N0jhRBtgyKC4E="
   "resolved" "https://registry.npm.taobao.org/babel-loader/download/babel-loader-8.2.2.tgz?cache=0&sync_timestamp=1606424688085&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-loader%2Fdownload%2Fbabel-loader-8.2.2.tgz"
@@ -1977,6 +2004,11 @@
   "integrity" "sha1-aN/1++YMUes3cl6p4+0xDcwed24="
   "resolved" "https://registry.npm.taobao.org/boolbase/download/boolbase-1.0.0.tgz"
   "version" "1.0.0"
+
+"bootstrap-css-only@^4.3.1":
+  "integrity" "sha512-iBgNli7RnedBFwn6sMTQoAZ8WgIwmX4kF1rckfj+pgro5q/Q0DbLtcpfH60XoFnCXzbEJU/khC/B2EQap89mCg=="
+  "resolved" "https://registry.npmjs.org/bootstrap-css-only/-/bootstrap-css-only-4.4.1.tgz"
+  "version" "4.4.1"
 
 "brace-expansion@^1.1.7":
   "integrity" "sha1-PH/L9SnYcibz0vUrlm/1Jx60Qd0="
@@ -2290,6 +2322,29 @@
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
+"chart.js@^2.8.0", "chart.js@>= 2.5":
+  "integrity" "sha512-B07aAzxcrikjAPyV+01j7BmOpxtQETxTSlQ26BEYJ+3iUkbNKaOJ/nDbT6JjyqYxseM0ON12COHYdU2cTIjC7A=="
+  "resolved" "https://registry.npmjs.org/chart.js/-/chart.js-2.9.4.tgz"
+  "version" "2.9.4"
+  dependencies:
+    "chartjs-color" "^2.1.0"
+    "moment" "^2.10.2"
+
+"chartjs-color-string@^0.6.0":
+  "integrity" "sha512-TIB5OKn1hPJvO7JcteW4WY/63v6KwEdt6udfnDE9iCAZgy+V4SrbSxoIbTw/xkUIapjEI4ExGtD0+6D3KyFd7A=="
+  "resolved" "https://registry.npmjs.org/chartjs-color-string/-/chartjs-color-string-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "color-name" "^1.0.0"
+
+"chartjs-color@^2.1.0":
+  "integrity" "sha512-haqOg1+Yebys/Ts/9bLo/BqUcONQOdr/hoEr2LLTRl6C5LXctUdHxsCYfvQVg5JIxITrfCNUDr4ntqmQk9+/0w=="
+  "resolved" "https://registry.npmjs.org/chartjs-color/-/chartjs-color-2.4.1.tgz"
+  "version" "2.4.1"
+  dependencies:
+    "chartjs-color-string" "^0.6.0"
+    "color-convert" "^1.9.3"
+
 "check-types@^8.0.3":
   "integrity" "sha1-M1bMoZyIlUTy16le1JzlCKDs9VI="
   "resolved" "https://registry.npm.taobao.org/check-types/download/check-types-8.0.3.tgz"
@@ -2446,7 +2501,7 @@
     "map-visit" "^1.0.0"
     "object-visit" "^1.0.0"
 
-"color-convert@^1.9.0", "color-convert@^1.9.1":
+"color-convert@^1.9.0", "color-convert@^1.9.1", "color-convert@^1.9.3":
   "integrity" "sha1-u3GFBpDh8TZWfeYp0tVHHe2kweg="
   "resolved" "https://registry.npm.taobao.org/color-convert/download/color-convert-1.9.3.tgz"
   "version" "1.9.3"
@@ -2657,7 +2712,7 @@
     "browserslist" "^4.16.6"
     "semver" "7.0.0"
 
-"core-js@^3.6.5":
+"core-js@^3.1.2", "core-js@^3.6.5":
   "integrity" "sha1-YjIrmMccwgGLAnlxppQZ4kJcKmw="
   "resolved" "https://registry.nlark.com/core-js/download/core-js-3.14.0.tgz"
   "version" "3.14.0"
@@ -2876,7 +2931,7 @@
   "resolved" "https://registry.nlark.com/cssnano-util-same-parent/download/cssnano-util-same-parent-4.0.1.tgz"
   "version" "4.0.1"
 
-"cssnano@^4.0.0", "cssnano@^4.1.10":
+"cssnano@^4.0.0", "cssnano@^4.1.10", "cssnano@^4.1.3":
   "integrity" "sha1-x7X1uB2iacsf2YLLlgwSAJEMmpk="
   "resolved" "https://registry.nlark.com/cssnano/download/cssnano-4.1.11.tgz"
   "version" "4.1.11"
@@ -2944,6 +2999,13 @@
   "version" "4.3.1"
   dependencies:
     "ms" "2.1.2"
+
+"debug@=3.1.0":
+  "integrity" "sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g=="
+  "resolved" "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz"
+  "version" "3.1.0"
+  dependencies:
+    "ms" "2.0.0"
 
 "debug@2.6.9":
   "integrity" "sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8="
@@ -3657,6 +3719,13 @@
   "integrity" "sha1-2RFN7Qoc/dM04WTmZirQK/2R/0M="
   "resolved" "https://registry.nlark.com/follow-redirects/download/follow-redirects-1.14.1.tgz"
   "version" "1.14.1"
+
+"follow-redirects@1.5.10":
+  "integrity" "sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ=="
+  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.5.10.tgz"
+  "version" "1.5.10"
+  dependencies:
+    "debug" "=3.1.0"
 
 "for-in@^1.0.2":
   "integrity" "sha1-gQaNKVqBQuwKxybG4iAMMPttXoA="
@@ -4553,7 +4622,7 @@
   "resolved" "https://registry.nlark.com/is-stream/download/is-stream-2.0.0.tgz"
   "version" "2.0.0"
 
-"is-string@^1.0.5", "is-string@^1.0.6":
+"is-string@^1.0.4", "is-string@^1.0.5", "is-string@^1.0.6":
   "integrity" "sha1-P+XVmS+w2TQE8yWE1LAXmnG1Sl8="
   "resolved" "https://registry.nlark.com/is-string/download/is-string-1.0.6.tgz?cache=0&sync_timestamp=1620448302935&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fis-string%2Fdownload%2Fis-string-1.0.6.tgz"
   "version" "1.0.6"
@@ -4631,7 +4700,7 @@
   dependencies:
     "easy-stack" "^1.0.1"
 
-"js-tokens@^4.0.0":
+"js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha1-GSA/tZmR35jjoocFDUZHzerzJJk="
   "resolved" "https://registry.nlark.com/js-tokens/download/js-tokens-4.0.0.tgz"
   "version" "4.0.0"
@@ -4881,6 +4950,13 @@
   "resolved" "https://registry.npm.taobao.org/loglevel/download/loglevel-1.7.1.tgz?cache=0&sync_timestamp=1606314031897&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Floglevel%2Fdownload%2Floglevel-1.7.1.tgz"
   "version" "1.7.1"
 
+"loose-envify@^1.2.0":
+  "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
+  "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "js-tokens" "^3.0.0 || ^4.0.0"
+
 "lower-case@^1.1.1":
   "integrity" "sha1-miyr0bno4K6ZOkv31YdcOcQujqw="
   "resolved" "https://registry.npm.taobao.org/lower-case/download/lower-case-1.1.4.tgz?cache=0&sync_timestamp=1606867274713&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flower-case%2Fdownload%2Flower-case-1.1.4.tgz"
@@ -4936,6 +5012,27 @@
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
     "safe-buffer" "^5.1.2"
+
+"mdbvue@^6.7.2":
+  "integrity" "sha512-ACnI/sUDIEGk9T7mxIVO4wSJiSat8ueQqxRGy6IXJWHY0R28blAZaY7HkicL4tkNTOApb5iAkASlzwL7bEcXew=="
+  "resolved" "https://registry.npmjs.org/mdbvue/-/mdbvue-6.7.2.tgz"
+  "version" "6.7.2"
+  dependencies:
+    "@fortawesome/fontawesome-free" "^5.11.2"
+    "axios" "^0.19.0"
+    "bootstrap-css-only" "^4.3.1"
+    "chart.js" "^2.8.0"
+    "core-js" "^3.1.2"
+    "moment" "^2.24.0"
+    "popper.js" "^1.16.0"
+    "vue" "^2.6.11"
+    "vue-chartjs" "^3.4.2"
+    "vue-clickaway" "^2.2.2"
+    "vue-numeric" "^2.3.0"
+    "vue-plugin-load-script" "^1.2.0"
+    "vue-router" "^3.1.3"
+    "vue2-perfect-scrollbar" "^1.2.1"
+    "vuex" "^3.1.2"
 
 "mdn-data@2.0.14":
   "integrity" "sha1-cRP8QoGRfWPOKbQ0RvcB5owlulA="
@@ -5131,6 +5228,11 @@
   "version" "0.5.5"
   dependencies:
     "minimist" "^1.2.5"
+
+"moment@^2.10.2", "moment@^2.24.0":
+  "integrity" "sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ=="
+  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz"
+  "version" "2.29.1"
 
 "move-concurrently@^1.0.1":
   "integrity" "sha1-viwAX9oy4LKa8fBdfEszIUxwH5I="
@@ -5689,6 +5791,11 @@
     "safe-buffer" "^5.0.1"
     "sha.js" "^2.4.8"
 
+"perfect-scrollbar@^1.5.0":
+  "integrity" "sha512-MrSImINnIh3Tm1hdPT6bji6fmIeRorVEegQvyUnhqko2hDGTHhmjPefHXfxG/Jb8xVbfCwgmUIlIajERGXjVXQ=="
+  "resolved" "https://registry.npmjs.org/perfect-scrollbar/-/perfect-scrollbar-1.5.1.tgz"
+  "version" "1.5.1"
+
 "performance-now@^2.1.0":
   "integrity" "sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns="
   "resolved" "https://registry.npm.taobao.org/performance-now/download/performance-now-2.1.0.tgz"
@@ -5702,6 +5809,11 @@
 "pify@^2.0.0":
   "integrity" "sha1-7RQaasBDqEnqWISY59yosVMw6Qw="
   "resolved" "https://registry.npm.taobao.org/pify/download/pify-2.3.0.tgz?cache=0&sync_timestamp=1581725110840&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpify%2Fdownload%2Fpify-2.3.0.tgz"
+  "version" "2.3.0"
+
+"pify@^2.3.0":
+  "integrity" "sha1-7RQaasBDqEnqWISY59yosVMw6Qw="
+  "resolved" "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz"
   "version" "2.3.0"
 
 "pify@^3.0.0":
@@ -5746,6 +5858,11 @@
   "version" "1.6.4"
   dependencies:
     "ts-pnp" "^1.1.6"
+
+"popper.js@^1.16.0":
+  "integrity" "sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ=="
+  "resolved" "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1.tgz"
+  "version" "1.16.1"
 
 "portfinder@^1.0.26":
   "integrity" "sha1-Z8RiKFK9U3TdHdkA93n1NGL6x3g="
@@ -5816,6 +5933,16 @@
   "version" "4.0.1"
   dependencies:
     "postcss" "^7.0.0"
+
+"postcss-import@^12.0.0":
+  "integrity" "sha512-3Gti33dmCjyKBgimqGxL3vcV8w9+bsHwO5UrBawp796+jdardbcFl4RP5w/76BwNL7aGzpKstIfF9I+kdE8pTw=="
+  "resolved" "https://registry.npmjs.org/postcss-import/-/postcss-import-12.0.1.tgz"
+  "version" "12.0.1"
+  dependencies:
+    "postcss" "^7.0.1"
+    "postcss-value-parser" "^3.2.3"
+    "read-cache" "^1.0.0"
+    "resolve" "^1.1.7"
 
 "postcss-load-config@^2.0.0":
   "integrity" "sha1-xepQTyxK7zPHNZo03jVzdyrXUCo="
@@ -6080,6 +6207,11 @@
   "resolved" "https://registry.npm.taobao.org/postcss-value-parser/download/postcss-value-parser-3.3.1.tgz"
   "version" "3.3.1"
 
+"postcss-value-parser@^3.2.3":
+  "integrity" "sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ=="
+  "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz"
+  "version" "3.3.1"
+
 "postcss-value-parser@^4.0.2", "postcss-value-parser@^4.1.0":
   "integrity" "sha1-RD9qIM7WSBor2k+oUypuVdeJoss="
   "resolved" "https://registry.npm.taobao.org/postcss-value-parser/download/postcss-value-parser-4.1.0.tgz"
@@ -6269,6 +6401,13 @@
     "http-errors" "1.7.2"
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
+
+"read-cache@^1.0.0":
+  "integrity" "sha1-5mTvMRYRZsl1HNvo28+GtftY93Q="
+  "resolved" "https://registry.npmjs.org/read-cache/-/read-cache-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "pify" "^2.3.0"
 
 "read-pkg@^5.1.1":
   "integrity" "sha1-e/KVQ4yloz5WzTDgU7NO5yUMk8w="
@@ -6489,7 +6628,7 @@
   "resolved" "https://registry.npm.taobao.org/resolve-url/download/resolve-url-0.2.1.tgz"
   "version" "0.2.1"
 
-"resolve@^1.10.0", "resolve@^1.14.2":
+"resolve@^1.1.7", "resolve@^1.10.0", "resolve@^1.14.2":
   "integrity" "sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU="
   "resolved" "https://registry.nlark.com/resolve/download/resolve-1.20.0.tgz"
   "version" "1.20.0"
@@ -7196,6 +7335,11 @@
     "unquote" "~1.1.1"
     "util.promisify" "~1.0.0"
 
+"sweetalert2@^11.0.16":
+  "integrity" "sha512-9XStCZJMQpLQBAT/jr/4qZuA5Xwoupi/x5FagZYM1qGnyRqYecaJTPD1Cb5gc7G+9B5muH/JaDaBQGrvLpCmvQ=="
+  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.0.16.tgz"
+  "version" "11.0.16"
+
 "tapable@^1.0.0", "tapable@^1.1.3":
   "integrity" "sha1-ofzMBrWNth/XpF2i2kT186Pme6I="
   "resolved" "https://registry.npm.taobao.org/tapable/download/tapable-1.1.3.tgz"
@@ -7602,6 +7746,20 @@
   "resolved" "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz"
   "version" "1.1.2"
 
+"vue-chartjs@^3.4.2":
+  "integrity" "sha512-foocQbJ7FtveICxb4EV5QuVpo6d8CmZFmAopBppDIGKY+esJV8IJgwmEW0RexQhxqXaL/E1xNURsgFFYyKzS/g=="
+  "resolved" "https://registry.npmjs.org/vue-chartjs/-/vue-chartjs-3.5.1.tgz"
+  "version" "3.5.1"
+  dependencies:
+    "@types/chart.js" "^2.7.55"
+
+"vue-clickaway@^2.2.2":
+  "integrity" "sha512-25SpjXKetL06GLYoLoC8pqAV6Cur9cQ//2g35GRFBV4FgoljbZZjTINR8g2NuVXXDMLSUXaKx5dutgO4PaDE7A=="
+  "resolved" "https://registry.npmjs.org/vue-clickaway/-/vue-clickaway-2.2.2.tgz"
+  "version" "2.2.2"
+  dependencies:
+    "loose-envify" "^1.2.0"
+
 "vue-hot-reload-api@^2.3.0":
   "integrity" "sha1-UylVzB6yCKPZkLOp+acFdGV+CPI="
   "resolved" "https://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz"
@@ -7627,7 +7785,19 @@
     "vue-hot-reload-api" "^2.3.0"
     "vue-style-loader" "^4.1.0"
 
-"vue-router@^3.2.0":
+"vue-numeric@^2.3.0":
+  "integrity" "sha512-Ud7XIhKT+6m88rm1cOy2OJ16qaF7iBhZ+pDnHX+Eco+y77Gg18y7pOOKThZCE7BIFb3tLDh+4z7iHQlJWLevRg=="
+  "resolved" "https://registry.npmjs.org/vue-numeric/-/vue-numeric-2.4.2.tgz"
+  "version" "2.4.2"
+  dependencies:
+    "accounting-js" "^1.1.1"
+
+"vue-plugin-load-script@^1.2.0":
+  "integrity" "sha512-UQcFanuWBf72/339LxgsPZbMsT5LKUjBzkQfV3xf4ni5fc6Nnx5GNYclODFaQ9FHtOjWhu423bhHrlBHz4MIFg=="
+  "resolved" "https://registry.npmjs.org/vue-plugin-load-script/-/vue-plugin-load-script-1.3.2.tgz"
+  "version" "1.3.2"
+
+"vue-router@^3.1.3", "vue-router@^3.2.0":
   "integrity" "sha512-RRQNLT8Mzr8z7eL4p7BtKvRaTSGdCbTy2+Mm5HTJvLGYSSeG9gDzNasJPP/yOYKLy+/cLG/ftrqq5fvkFwBJEw=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-3.5.1.tgz"
   "version" "3.5.1"
@@ -7653,10 +7823,24 @@
   "resolved" "https://registry.nlark.com/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@^2 || ^3.0.0-0", "vue@^2.6.11":
+"vue@^2 || ^3.0.0-0", "vue@^2.0.0", "vue@^2.6.11":
   "integrity" "sha512-O+pAdJkce1ooYS1XyoQtpBQr9An+Oys3w39rkqxukVO3ZD1ilYJkWBGoRuadiQEm2LLJnCL2utV4TMSf52ubjw=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-2.6.13.tgz"
   "version" "2.6.13"
+
+"vue2-perfect-scrollbar@^1.2.1":
+  "integrity" "sha512-hQAjhOX9MP3/ePa/AozKKtpiHSaV0dBlniyt2L7eqC/PsDx+pu7YBmTpM0KR5WlNq5GZwreK6215L8ZG1EHC7w=="
+  "resolved" "https://registry.npmjs.org/vue2-perfect-scrollbar/-/vue2-perfect-scrollbar-1.5.0.tgz"
+  "version" "1.5.0"
+  dependencies:
+    "cssnano" "^4.1.3"
+    "perfect-scrollbar" "^1.5.0"
+    "postcss-import" "^12.0.0"
+
+"vuex@^3.1.2":
+  "integrity" "sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw=="
+  "resolved" "https://registry.npmjs.org/vuex/-/vuex-3.6.2.tgz"
+  "version" "3.6.2"
 
 "watchpack-chokidar2@^2.0.1":
   "integrity" "sha1-OFAAcu5uzmbzdpk2lQ6hdxvhyVc="

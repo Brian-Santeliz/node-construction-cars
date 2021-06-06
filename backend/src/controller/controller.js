@@ -95,10 +95,51 @@ const eliminarAuto = async (req, res) => {
   try {
     const { id } = req.params;
     const autoEliminado = await autoModel.findByIdAndDelete({ _id: id });
-    if(!autoEliminado){
-      return res.status(400).json('No se pudo eliminar el auto')
+    if (!autoEliminado) {
+      return res.status(400).json('No se pudo eliminar el auto');
     }
     res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+};
+const actualizarAuto = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      motor,
+      tanque,
+      rueda,
+      puerta,
+      asiento,
+      ventana,
+      carroceria,
+      transmision,
+    } = req.body;
+    const [carroceriaRespues] = await carroceriaModel.find({
+      tipo: carroceria,
+    });
+    const [transmisionRespuesta] = await transmisionModel.find({
+      tipo: transmision,
+    });
+
+    const autoActualizado = await autoModel.findByIdAndUpdate(
+      { _id: id },
+      {
+        motor,
+        tanque,
+        rueda,
+        puerta,
+        asiento,
+        ventana,
+        carroceria: carroceriaRespues._id,
+        transmision: transmisionRespuesta._id,
+      }
+    );
+    if (!autoActualizado) {
+      return res.status(400).json('No se pudo actualizar el auto');
+    }
+    res.status(200).json('Auto actualizado correctamente');
   } catch (error) {
     res.status(500).json(error.message);
   }
@@ -129,4 +170,5 @@ module.exports = {
   crearTransmision,
   listarAuto,
   eliminarAuto,
+  actualizarAuto,
 };

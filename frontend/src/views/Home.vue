@@ -18,17 +18,46 @@
           </thead>
           <tbody>
             <tr v-for="auto in autos" :key="auto.id">
-              <td>{{auto.motor ? auto.motor : "Sin especificar" }}</td>
-              <td>{{ auto.tanque ? auto.tanque : "Sin especificar"  }}</td>
-              <td>{{ auto.rueda ? auto.rueda : "Sin especificar"  }}</td>
+              <td>{{ auto.motor ? auto.motor : "Sin especificar" }}</td>
+              <td>{{ auto.tanque ? auto.tanque : "Sin especificar" }}</td>
               <td>{{ auto.rueda ? auto.rueda : "Sin especificar" }}</td>
-              <td>{{ auto.Ventana ? auto.Ventana : "Sin especificar"  }}</td>
+              <td>{{ auto.rueda ? auto.rueda : "Sin especificar" }}</td>
+              <td>{{ auto.ventana ? auto.ventana : "Sin especificar" }}</td>
               <td>{{ auto.asiento ? auto.asiento : "Sin especificar" }}</td>
-              <td>{{ auto.carroceria.tipo ? auto.carroceria.tipo : "Sin especificar"  }}</td>
-              <td>{{ auto.transmision.tipo ? auto.transmision.tipo : "Sin especificar"  }}</td>
               <td>
-                <a class="btn btn-danger p-2">Eliminar</a>
-                <a class="btn btn-info p-2 ml-2 margin-btn">Editar</a>
+                {{
+                  auto.carroceria.tipo
+                    ? auto.carroceria.tipo
+                    : "Sin especificar"
+                }}
+              </td>
+              <td>
+                {{
+                  auto.transmision.tipo
+                    ? auto.transmision.tipo
+                    : "Sin especificar"
+                }}
+              </td>
+              <td>
+                <mdb-btn
+                  class="bg-danger m-0 ml-2 p-1 pb-2"
+                  dark-waves
+                  flat
+                  icon-class="text-white"
+                  icon="trash"
+                  size="sm"
+                  title="Eliminar auto"
+                  @click="eliminarAuto(auto._id)"
+                />
+                <mdb-btn
+                  class="bg-success m-0 ml-2 p-1 pb-2"
+                  dark-waves
+                  flat
+                  icon-class="text-white"
+                  icon="pen"
+                  size="sm"
+                  title="Editar auto"
+                />
               </td>
             </tr>
           </tbody>
@@ -49,9 +78,15 @@
 </template>
 
 <script>
+import { mdbBtn } from "mdbvue";
 import axios from "axios";
+import Swal from "sweetalert2";
 const url = "http://localhost:3000/api/autos";
 export default {
+  name: "Home",
+  components: {
+    mdbBtn,
+  },
   data() {
     return {
       cargandoAutos: false,
@@ -69,8 +104,30 @@ export default {
         this.autos = response.data;
         this.cargandoAutos = false;
       } catch (error) {
-        alert(error.message);
+        Swal.fire("Ocurrió un error", error.message, "error");
         this.cargandoAutos = false;
+      }
+    },
+    async eliminarAuto(idAuto) {
+      try {
+        Swal.fire({
+          title: "¿Desea eliminar el auto?",
+          text: "Después de eliminar el auto no se podrá recuperar",
+          icon: "warning",
+          showCancelButton: true,
+          cancelButtonText: "Cancelar",
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Eliminar",
+        }).then(async (result) => {
+          if (result.isConfirmed) {
+            const response = await axios.delete(`${url}/${idAuto}`);
+            Swal.fire("Eliminado", response.data, "success");
+            this.obtenerAutos();
+          }
+        });
+      } catch (error) {
+        Swal.fire("Ocurrió un error", error.message, "error");
       }
     },
   },
@@ -97,6 +154,7 @@ export default {
 
   tr {
     margin: 0 0 1rem 0;
+    margin-top: 2em;
   }
 
   tr:nth-child(odd) {
@@ -162,11 +220,5 @@ export default {
   font-size: 1.1rem;
   cursor: default;
   margin-top: 17em;
-}
-@media only screen and (max-width: 1183px) {
-  .margin-btn {
-    margin: 0;
-    margin-top: 5px;
-  }
 }
 </style>

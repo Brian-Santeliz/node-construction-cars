@@ -1,6 +1,8 @@
 const autoModel = require('../models/auto');
 const carroceriaModel = require('../models/carroceria');
 const transmisionModel = require('../models/transmision');
+const { JSDOM } = require('jsdom');
+const { window } = new JSDOM();
 const {
   ensamblarMotor,
   ensamblarRueda,
@@ -116,13 +118,13 @@ const actualizarAuto = async (req, res) => {
       carroceria,
       transmision,
     } = req.body;
+    const inicio = window.performance.now()
     const [carroceriaRespues] = await carroceriaModel.find({
       tipo: carroceria,
     });
     const [transmisionRespuesta] = await transmisionModel.find({
       tipo: transmision,
     });
-
     const autoActualizado = await autoModel.findByIdAndUpdate(
       { _id: id },
       {
@@ -136,10 +138,12 @@ const actualizarAuto = async (req, res) => {
         transmision: transmisionRespuesta._id,
       }
     );
+    const final = window.performance.now()
+    const total = inicio - final / 1000
     if (!autoActualizado) {
       return res.status(400).json('No se pudo actualizar el auto');
     }
-    res.status(200).json('Auto actualizado correctamente');
+    res.status(200).json({msg:'Auto actualizado correctamente', tiempo:total.toFixed(2)});
   } catch (error) {
     res.status(500).json(error.message);
   }

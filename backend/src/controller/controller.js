@@ -67,7 +67,7 @@ const crearAuto = async (req, res) => {
       modeloCarroceria,
       idTransmision
     );
-    const tiempoDeEspera = {
+    const tiempoDeEspera = [
       tiempoMotor,
       tiempoRueda,
       tiempoTanque,
@@ -76,8 +76,12 @@ const crearAuto = async (req, res) => {
       tiempoVentana,
       tiempoCarroceria,
       tiempoTransmision,
-    };
-    res.status(201).json({ tiempoDeEspera, msg: 'Auto ensamblado totalmente' });
+    ];
+    const valorMaximo = Math.max(...tiempoDeEspera);
+    res.status(201).json({
+      tiempoEmsablado: valorMaximo,
+      msg: 'Auto ensamblado totalmente',
+    });
   } catch (error) {
     res.status(500).json(error.message);
   }
@@ -100,7 +104,7 @@ const eliminarAuto = async (req, res) => {
     if (!autoEliminado) {
       return res.status(400).json('No se pudo eliminar el auto');
     }
-    res.status(200).json(response);
+    res.status(200).json('Auto eliminado correctamente');
   } catch (error) {
     res.status(500).json(error.message);
   }
@@ -118,7 +122,7 @@ const actualizarAuto = async (req, res) => {
       carroceria,
       transmision,
     } = req.body;
-    const inicio = window.performance.now()
+    const inicio = window.performance.now();
     const [carroceriaRespues] = await carroceriaModel.find({
       tipo: carroceria,
     });
@@ -138,12 +142,15 @@ const actualizarAuto = async (req, res) => {
         transmision: transmisionRespuesta._id,
       }
     );
-    const final = window.performance.now()
-    const total = inicio - final / 1000
+    const final = window.performance.now();
+    const total = inicio - final / 1000;
     if (!autoActualizado) {
-      return res.status(400).json('No se pudo actualizar el auto');
+      return res.status(400).json('No se pudó actualizar el auto');
     }
-    res.status(200).json({msg:'Auto actualizado correctamente', tiempo:total.toFixed(2)});
+    res.status(200).json({
+      msg: 'Auto actualizado correctamente',
+      tiempo: total.toFixed(2),
+    });
   } catch (error) {
     res.status(500).json(error.message);
   }
@@ -151,9 +158,25 @@ const actualizarAuto = async (req, res) => {
 const crearCarroceria = async (req, res) => {
   const { tipo } = req.body;
   try {
+    const encontrado = await carroceriaModel.findOne({ tipo });
+    if (encontrado) {
+      return res.json('Esta carrocería se encuentra registrada previamente');
+    }
     const carroceria = new carroceriaModel({ tipo });
     await carroceria.save();
-    res.status(201).json('Carroceria creada correctamente');
+    res.status(201).json('Carrocería creada correctamente');
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+};
+const obtenerAutoId = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const response = await autoModel
+      .findById({ _id: id })
+      .populate('transmision')
+      .populate('carroceria');
+    res.status(200).json(response);
   } catch (error) {
     res.status(500).json(error.message);
   }
@@ -161,9 +184,29 @@ const crearCarroceria = async (req, res) => {
 const crearTransmision = async (req, res) => {
   const { tipo } = req.body;
   try {
+    const encontrado = await transmisionModel.findOne({ tipo });
+    if (encontrado) {
+      return res.json('Esta transmisión ya encuentra registrada');
+    }
     const transmision = new transmisionModel({ tipo });
     await transmision.save();
     res.status(201).json('Transmisión creada correctamente');
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+};
+const obtenerTransmision = async (req, res) => {
+  try {
+    const response = await transmisionModel.find();
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+};
+const obtenerCarroceria = async (req, res) => {
+  try {
+    const response = await carroceriaModel.find();
+    res.status(200).json(response);
   } catch (error) {
     res.status(500).json(error.message);
   }
@@ -175,4 +218,7 @@ module.exports = {
   listarAuto,
   eliminarAuto,
   actualizarAuto,
+  obtenerTransmision,
+  obtenerCarroceria,
+  obtenerAutoId,
 };

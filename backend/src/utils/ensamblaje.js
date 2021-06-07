@@ -7,9 +7,9 @@ const ensamblarMotor = async (modelo, valor) => {
   const modeloMotor = await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoMotor = `El tiempo tomado para ensamblar el motor tomó: ${tiempoTotal.toFixed(
+  const tiempoMotor = tiempoTotal.toFixed(
     2
-  )} segundos`;
+  );
   return { modeloMotor, tiempoMotor };
 };
 const ensamblarRueda = async (modelo, valor) => {
@@ -18,9 +18,9 @@ const ensamblarRueda = async (modelo, valor) => {
   const modeloRueda = await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoRueda = `El tiempo tomado para ensamblar la rueda tomó: ${tiempoTotal.toFixed(
+  const tiempoRueda =tiempoTotal.toFixed(
     2
-  )} segundos`;
+  )
   return { modeloRueda, tiempoRueda };
 };
 const ensamblarTanque = async (modelo, valor) => {
@@ -29,9 +29,9 @@ const ensamblarTanque = async (modelo, valor) => {
   const modeloTanque = await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoTanque = `El tiempo tomado para ensamblar el tanque tomó: ${tiempoTotal.toFixed(
+  const tiempoTanque = tiempoTotal.toFixed(
     2
-  )} segundos`;
+  )
   return { modeloTanque, tiempoTanque };
 };
 const ensamblarPuerta = async (modelo, valor) => {
@@ -40,9 +40,9 @@ const ensamblarPuerta = async (modelo, valor) => {
   const modeloPuerta = await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoPuerta = `El tiempo tomado para ensamblar la puerta tomó: ${tiempoTotal.toFixed(
+  const tiempoPuerta = tiempoTotal.toFixed(
     2
-  )} segundos`;
+  )
   return { modeloPuerta, tiempoPuerta };
 };
 const ensamblarAsiento = async (modelo, valor) => {
@@ -51,9 +51,9 @@ const ensamblarAsiento = async (modelo, valor) => {
   const modeloAsiento = await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoAsiento = `El tiempo tomado para ensamblar el asiento tomó: ${tiempoTotal.toFixed(
+  const tiempoAsiento = tiempoTotal.toFixed(
     2
-  )} segundos`;
+  )
   return { modeloAsiento, tiempoAsiento };
 };
 const ensamblarVentana = async (modelo, valor) => {
@@ -62,9 +62,9 @@ const ensamblarVentana = async (modelo, valor) => {
   const modeloVentana = await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoVentana = `El tiempo tomado para ensamblar la ventana tomó: ${tiempoTotal.toFixed(
+  const tiempoVentana = tiempoTotal.toFixed(
     2
-  )} segundos`;
+  )
   return { modeloVentana, tiempoVentana };
 };
 const ensamblarCarroceria = async (modelo, valor) => {
@@ -73,9 +73,9 @@ const ensamblarCarroceria = async (modelo, valor) => {
   const modeloCarroceria = await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoCarroceria = `El tiempo tomado para ensamblar la carroceria tomó: ${tiempoTotal.toFixed(
+  const tiempoCarroceria = tiempoTotal.toFixed(
     2
-  )} segundos`;
+  )
   return { modeloCarroceria, tiempoCarroceria };
 };
 const ensamblarTransmision = async (modelo, valor) => {
@@ -84,9 +84,9 @@ const ensamblarTransmision = async (modelo, valor) => {
   await modelo.save();
   const final = window.performance.now();
   const tiempoTotal = inicio - final / 1000;
-  const tiempoTransmision = `El tiempo tomado para ensamblar la transmisión tomó: ${tiempoTotal.toFixed(
+  const tiempoTransmision = tiempoTotal.toFixed(
     2
-  )} segundos`;
+  )
   return {  tiempoTransmision };
 };
 module.exports = {

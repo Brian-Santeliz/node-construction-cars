@@ -11,7 +11,7 @@
               <th scope="col">Puerta</th>
               <th scope="col">Ventana</th>
               <th scope="col">Asiento</th>
-              <th scope="col">Carroceria</th>
+              <th scope="col">Carrocería</th>
               <th scope="col">Transmisión</th>
               <th scope="col">Acción</th>
             </tr>
@@ -26,14 +26,14 @@
               <td>{{ auto.asiento ? auto.asiento : "Sin especificar" }}</td>
               <td>
                 {{
-                  auto.carroceria.tipo
+                  auto.carroceria && auto.carroceria.tipo
                     ? auto.carroceria.tipo
                     : "Sin especificar"
                 }}
               </td>
               <td>
                 {{
-                  auto.transmision.tipo
+                  auto.transmision && auto.transmision.tipo
                     ? auto.transmision.tipo
                     : "Sin especificar"
                 }}
@@ -57,6 +57,7 @@
                   icon="pen"
                   size="sm"
                   title="Editar auto"
+                  @click="editarAuto(auto._id)"
                 />
               </td>
             </tr>
@@ -78,10 +79,10 @@
 </template>
 
 <script>
+import { url } from "@/constante.js";
 import { mdbBtn } from "mdbvue";
 import axios from "axios";
 import Swal from "sweetalert2";
-const url = "http://localhost:3000/api/autos";
 export default {
   name: "Home",
   components: {
@@ -93,7 +94,7 @@ export default {
       autos: [],
     };
   },
-  async created() {
+  created() {
     this.obtenerAutos();
   },
   methods: {
@@ -129,6 +130,9 @@ export default {
       } catch (error) {
         Swal.fire("Ocurrió un error", error.message, "error");
       }
+    },
+    editarAuto(id) {
+      this.$router.push(`/editar/${id}`);
     },
   },
 };
